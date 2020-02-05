@@ -40,8 +40,6 @@ export class ItemService {
         { id: 31, name: "Samoyed", role: "Companionship", type: "dog", image: "https://images6.alphacoders.com/910/thumb-1920-910688.jpg" },
         { id: 32, name: "Chow Chow", role: "Companionship", type: "dog", image: "https://www.pawsplaygrounds.com/wp-content/uploads/2016/12/Chow-Chow-dog.jpg" },
         { id: 33, name: "Havanese", role: "Companionship", type: "dog", image: "https://i.pinimg.com/originals/5d/2e/da/5d2eda0c54f942ff15645e366b1745d3.jpg" },
-
-
     );
 
     getItems(): Array<Item> {

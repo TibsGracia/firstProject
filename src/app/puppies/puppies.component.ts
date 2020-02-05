@@ -11,19 +11,17 @@ export class PuppiesComponent implements OnInit {
   items: Array<Item>;
   length = 0
   show = false;
-  newData : Item
   constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {
     this.items = this.itemService.getPuppies()
-    this.length = this.itemService.getLength()
   }
 
   addPuppies(data) {
     this.length = this.itemService.getLength()
     var puppies = {
       id: this.length + 1,
-      name: data.name,
+      name: data.name,  
       role: data.role,
       type: "dog",
       image: "https://lh3.googleusercontent.com/proxy/zH4gnKVfo-wX57kf6-Zvpyd_uUT224ZWdxDlLDxYcW4FfRpYMKbwIoSyEhXAt5ZmiyzN-Q7CMjU_yyGy0QP59z2dgl6VsQ8kG88JjUQ5y5Nge9ICz-PPUFVSPpUe7_uhAkCDgsaKvxTGXVMNlU_4e5Fs"

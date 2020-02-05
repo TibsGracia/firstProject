@@ -21,17 +21,8 @@ export class ItemsComponent implements OnInit {
     }
 
     addnewItem(data) {
-        // this.items.unshift(this.newData)
-        // this.itemService.addItem(this.newData)
         this.newDataEvent.emit(data)
         this.show=!this.show
-    }
-    delete(id) { 
-        for (let i = 0; i < this.items.length; i++) {
-            if (this.items[i].id == id) {
-                this.items.splice(i, 1)
-            }
-        }
     }
 
     showForm(){
