@@ -1,0 +1,20 @@
+<ActionBar [title]="title">
+    <ActionItem horizontalAlignment="right" (tap)="showForm()" text="Add" android.systemIcon="ic_menu_add"
+    ></ActionItem>
+    <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" [nsRouterLink]="['/home']"></NavigationButton>
+</ActionBar>
+
+<GridLayout>
+    <ListView [items]="items">
+        <ng-template let-item="item">
+            <StackLayout>
+                <Label class="h2" [nsRouterLink]="['/item', item.id]" [text]="item.name"></Label>
+                <!-- 
+                <button class="-primary -rounded-sm" style="width: 40%;background-color: pink; width:15%; margin-left:80%"
+                    text="Delete" (tap)="delete(item.id)"></button> -->
+
+            </StackLayout>
+        </ng-template>
+    </ListView>
+</GridLayout>
+<ns-form *ngIf="show" (formEvent)="addnewItem($event)" [title]="formTitle"></ns-form>

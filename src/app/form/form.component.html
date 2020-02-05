@@ -1,0 +1,15 @@
+<GridLayout>
+    <StackLayout margin="10" verticalAlignment="bottom" >
+        <StackLayout class="form" padding="15" backgroundColor="#FFFFFF" #myform>
+                <Label [text]="title" class="h1"  color="black" ></Label>
+            <StackLayout class="input-field">
+                <Label text="Name" class="label font-weight-bold m-b-5"></Label>
+                <TextField class="input" hint="Name" color="black" [(ngModel)]="name"></TextField>            </StackLayout>
+            <StackLayout class="input-field">
+                <Label text="Role" class="label font-weight-bold m-b-5"></Label>
+                <TextField class="input"  hint="Role" [(ngModel)]="role" color="black" ></TextField>
+            </StackLayout>
+            <Button class="btn btn-primary w-full" text="Submit" (tap) ="submit()"></Button>
+        </StackLayout>
+    </StackLayout>
+</GridLayout>

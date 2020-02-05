@@ -1,0 +1,15 @@
+<!-- https://docs.nativescript.org/angular/core-concepts/angular-navigation.html#page-router-outlet -->
+<!-- <ActionBar title="Welcome Users">
+</ActionBar> -->
+<GridLayout>
+    <StackLayout style="background-image: url('https://3diphonewallpaper.com/wp-content/uploads/2017/10/Cool-Liquid-Wallpaper-iPhone.jpg'); background-repeat: no-repeat;
+    background-position: center; background-size: cover;">
+        <Label *ngIf="!show" text="Welcome Users" class="h1" horizontalAlignment="center"></Label>
+        <Button *ngIf="!show" text="Go to Puppies Store" [nsRouterLink]="['/puppies']" class="-primary -rounded-sm"
+            style="width: 500px;height: 70px; background-color: pink; margin-top: 30%" (tap)="showBtn()">
+        </Button>
+        <Button *ngIf="!show" text="Go to Soccer Players" [nsRouterLink]="['/players']" class="-primary -rounded-sm "
+            style="width: 500px;height: 70px; background-color: skyblue " (tap)="showBtn()"></Button>
+        <page-router-outlet></page-router-outlet>
+    </StackLayout>
+</GridLayout>
